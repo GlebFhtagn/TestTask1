@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" prefHeight="194.0" prefWidth="319.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="sample.TestTaskController">
+    <Button fx:id="calculate" onAction="#Calculate" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button fx:id="save" onAction="#Save" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Button fx:id="load" onAction="#Load" text="Load" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <TextField fx:id="FirstField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <TextField fx:id="SecondField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label fx:id="resultLabel" text="result: " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <ComboBox fx:id="taskBox" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+</GridPane>
