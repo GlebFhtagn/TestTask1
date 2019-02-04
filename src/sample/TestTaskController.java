@@ -25,12 +25,12 @@ public class TestTaskController {
             case "Decimal Decomposition":       //если выбрана задача разложения числа на десятичные степени
                 try{
                     if(conditions[0] != "") {
-                        double rest = ((Integer.parseInt(conditions[0])) % 1);
-                        if (rest == 0)                                                      // убеждаемся, что у числа отсутствует дробная доля
+                        int currValue = (Integer.parseInt(conditions[0]));
+                        if (currValue > 0)                                                      // убеждаемся, что чило больше нуля
                             resultLabel.setText(Logic.decompose(conditions));
                     }
                 } catch (NumberFormatException e){
-                    System.out.println("Число с дробной частью, либо смешанного содержания"); // как бы это не проблема, но пока не дописал
+                    System.out.println("Число с дробной частью, либо смешанного содержания"); // отлов записи данных противоречащих условиям, возобновляем выполнение потока
                 }
                 break;
 
