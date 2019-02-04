@@ -7,16 +7,17 @@ public class Logic {
         String[] ar1 = conditions[0].split(" ");           //разделение строки строки с помощью паттерна регулярноо выражения
         String[] ar2 = conditions[1].split(" ");
 
-        ArrayList<String> result = new ArrayList<String>();            // размер результата динамический, поэтому используем лист
-        for(String str1: ar1){
+        Set<String> result = new HashSet<String>();            // размер результата динамический, поэтому используем множество
+        for(String str1: ar1){                                 // так же избавляемся от повторений
            for(String str2: ar2)
             if(str2.contains(str1)){                              //проверяем для каждого слова из первого массива вхождение в слово из второго массива
                 result.add(str1);
                 break;
             }
         }
-        Collections.sort(result, new SortByValue());
-        return result.toString();
+        List list = new ArrayList(result);                     // для упорядочивания результата изпользуем список
+        Collections.sort(list, new SortByValue());
+        return list.toString();
     }
 
     public static String decompose(String[] conditions) {
